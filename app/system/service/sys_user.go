@@ -9,6 +9,8 @@ import (
 	"gfast/app/system/dao"
 	"gfast/app/system/model"
 	"gfast/library"
+	"time"
+
 	"github.com/gogf/gf/container/gset"
 	"github.com/gogf/gf/database/gdb"
 	"github.com/gogf/gf/errors/gerror"
@@ -772,4 +774,69 @@ func (s *sysUser) ProfileUpdatePwd(req *model.ProfileUpdatePwdReq) error {
 		dao.SysUser.Columns.UserPassword: newPassword,
 	})
 	return err
+}
+
+// GetUserInfoByEmail 邮箱地址获取用户信息，仅第三方授权登陆用
+func (s *sysUser) GetUserInfoByEmail(email string) (user *model.SysUser, err error) {
+	//用户用户信息
+	err = dao.SysUser.Where(dao.SysUser.Columns.UserEmail, email).
+		FieldsEx(dao.SysUser.Columns.UserPassword, dao.SysUser.Columns.UserSalt).Scan(&user)
+
+	if err != nil {
+		g.Log().Error(err)
+		return nil, errors.New("获取用户数据失败")
+	}
+
+	return
+}
+
+// AddUserFromOauthUser 第三方登陆的用户入库
+func (s *sysUser) AddUserFromOauthUser(user *model.OauthUser) (err error) {
+	var tx *gdb.TX
+	tx, err = g.DB().Begin()
+	if err != nil {
+		err = gerror.New("事务开启失败")
+		return
+	}
+	Model := dao.SysUser.TX(tx)
+	if i, _ := Model.Where("user_email=?", user.Email).Count(); i != 0 {
+		err = gerror.New("邮箱已经存在")
+		tx.Rollback()
+		return
+	}
+	userData := new(model.SysUser)
+	userData.UserName = user.Email
+	userData.DeptId = 101
+	// userData.UserStatus = req.Status
+	userData.Mobile = user.Email
+	// userData.Sex = req.Sex
+	userData.UserEmail = user.Email
+	userData.Avatar = "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg"
+	userData.UserNickname = fmt.Sprintf("u_%d", time.Now().Unix())
+	// userData.UserSalt = req.UserSalt
+	// userData.UserPassword = req.Password
+	// userData.Remark = req.Remark
+	// userData.IsAdmin = req.IsAdmin
+	res, err := Model.Insert(userData)
+	if err != nil {
+		tx.Rollback()
+		return
+	}
+	InsertId, _ := res.LastInsertId()
+	err = s.AddUserRole(1, InsertId)
+	if err != nil {
+		g.Log().Error(err)
+		err = gerror.New("设置用户权限失败")
+		tx.Rollback()
+		return
+	}
+	err = s.AddUserPost([]int64{1}, InsertId, tx)
+	if err != nil {
+		g.Log().Error(err)
+		err = gerror.New("设置用户岗位信息失败")
+		tx.Rollback()
+		return
+	}
+	tx.Commit()
+	return
 }

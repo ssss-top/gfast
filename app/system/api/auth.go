@@ -7,6 +7,8 @@ import (
 	"gfast/app/system/model"
 	"gfast/app/system/service"
 	"gfast/library"
+	"strings"
+
 	"github.com/goflyfox/gtoken/gtoken"
 	"github.com/gogf/gf/crypto/gmd5"
 	"github.com/gogf/gf/encoding/gjson"
@@ -18,7 +20,6 @@ import (
 	"github.com/gogf/gf/util/gconv"
 	"github.com/gogf/gf/util/gvalid"
 	"github.com/mssola/user_agent"
-	"strings"
 )
 
 type auth struct {
@@ -38,7 +39,7 @@ var (
 		AuthFailMsg:      g.Cfg().GetString("gToken.system.AuthFailMsg"),
 		MultiLogin:       MultiLogin,
 		LoginPath:        "/login",
-		LoginBeforeFunc:  Auth.login,
+		LoginBeforeFunc:  Auth.loginForOauth,
 		LoginAfterFunc:   Auth.loginAfter,
 		LogoutPath:       "/logout",
 		AuthExcludePaths: g.SliceStr{"/login"},
@@ -107,10 +108,10 @@ func (c *auth) loginAfter(r *ghttp.Request, respData gtoken.Resp) {
 			Uuid:       uuid,
 			Token:      token,
 			CreateTime: gtime.Now(),
-			UserName:   userInfo.UserName,
-			Ip:         library.GetClientIp(r),
-			Explorer:   explorer,
-			Os:         os,
+			// UserName:   userInfo.UserName,
+			Ip:       library.GetClientIp(r),
+			Explorer: explorer,
+			Os:       os,
 		}
 		//保存用户在线状态(异步)
 		service.Online.Invoke(onlineData)

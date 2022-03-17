@@ -32,7 +32,7 @@
 
 # Database.
 [database]
-    link  = "mysql:root:123456@tcp(localhost:3306)/gfast-v2-os"
+    link  = "mysql:root:1234@tcp(localhost:3306)/gfast-v2-os"
     charset   = "utf8mb4" #数据库编码
     debug = true
     dryRun = false #空跑
@@ -47,13 +47,13 @@
 
 # Redis数据库配置
 [redis]
-    open = true #是否开启 redis 缓存 若不开启使用gchache缓存方式
-    default = "127.0.0.1:6379,9?idleTimeout=20&maxActive=100"
+    open = false #是否开启 redis 缓存 若不开启使用gchache缓存方式
+    default = "127.0.0.1:16379,9?idleTimeout=20&maxActive=100"
 
 #jwt配置
 [gToken]
     [gToken.system]
-        CacheMode = 2
+        CacheMode = 1
         CacheKey = "GToken:"
         Timeout = 10800000 #3个小时
         MaxRefresh = 0
