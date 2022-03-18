@@ -96,3 +96,8 @@
 # 插件管理
 [plugin]
     serverUrl = "https://plugins.g-fast.cn"  #获取插件商城插件列表
+
+
+# oauth 服务
+[oauth]
+    authorizerUrl = "http://oautht01.sspool.cn:7080/graphql"   # authorizer服务URL

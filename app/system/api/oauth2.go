@@ -9,6 +9,7 @@ import (
 	"io/ioutil"
 
 	"github.com/gogf/gf/crypto/gmd5"
+	"github.com/gogf/gf/frame/g"
 	"github.com/gogf/gf/net/ghttp"
 	"github.com/gogf/gf/util/gconv"
 	"github.com/gogf/gf/util/gvalid"
@@ -61,7 +62,7 @@ func userProfileFromOauthSrv(accessToken string) (*model.OauthUser, error) {
 	jsonData := []byte(`{"operationName":null,"variables":{},"query":"{\n  profile {\n    id\n    email\n    given_name\n    family_name\n    picture\n  }\n}\n"}`)
 
 	gc := ghttp.NewClient().SetHeader("Authorization", fmt.Sprintf("Bearer %s", accessToken))
-	resp, err := gc.Post("http://localhost:8080/graphql", jsonData)
+	resp, err := gc.Post(g.Cfg().GetString("oauth.authorizerUrl"), jsonData)
 	if err != nil {
 		return nil, err
 	}
