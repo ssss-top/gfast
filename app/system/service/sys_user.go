@@ -9,6 +9,7 @@ import (
 	"gfast/app/system/dao"
 	"gfast/app/system/model"
 	"gfast/library"
+	"math/rand"
 	"reflect"
 	"time"
 
@@ -872,6 +873,11 @@ func (s *sysUser) GetUserInfoByEmail(email string) (user *model.SysUser, err err
 
 // AddUserFromOauthUser 第三方登陆的用户入库
 func (s *sysUser) AddUserFromOauthUser(user *model.OauthUser) (err error) {
+	const (
+		defaultDeptID = 101 // 深圳总公司
+		defaultStatus = 1   // 正常
+		defaultPost   = 1   // 默认
+	)
 	var tx *gdb.TX
 	tx, err = g.DB().Begin()
 	if err != nil {
@@ -886,31 +892,31 @@ func (s *sysUser) AddUserFromOauthUser(user *model.OauthUser) (err error) {
 	}
 	userData := new(model.SysUser)
 	userData.UserName = user.Email
-	userData.DeptId = 101
-	// userData.UserStatus = req.Status
+	userData.DeptId = defaultDeptID
+	userData.UserStatus = defaultStatus
 	userData.Mobile = user.Email
-	// userData.Sex = req.Sex
 	userData.UserEmail = user.Email
-	userData.Avatar = "https://st3.depositphotos.com/1767687/16607/v/600/depositphotos_166074422-stock-illustration-default-avatar-profile-icon-grey.jpg"
+	userData.Avatar = fmt.Sprintf("https://www.larvalabs.com/cryptopunks/cryptopunk%d.png", rand.Intn(2000))
 	userData.UserNickname = fmt.Sprintf("u_%d", time.Now().Unix())
 	// userData.UserSalt = req.UserSalt
 	// userData.UserPassword = req.Password
 	// userData.Remark = req.Remark
 	// userData.IsAdmin = req.IsAdmin
+	// userData.Sex = req.Sex
 	res, err := Model.Insert(userData)
 	if err != nil {
 		tx.Rollback()
 		return
 	}
 	InsertId, _ := res.LastInsertId()
-	err = s.AddUserRole(1, InsertId)
+	err = s.AddUserRole(roleToIntRole(user.Roles), InsertId)
 	if err != nil {
 		g.Log().Error(err)
 		err = gerror.New("设置用户权限失败")
 		tx.Rollback()
 		return
 	}
-	err = s.AddUserPost([]int64{1}, InsertId, tx)
+	err = s.AddUserPost([]int64{defaultPost}, InsertId, tx)
 	if err != nil {
 		g.Log().Error(err)
 		err = gerror.New("设置用户岗位信息失败")
@@ -920,4 +926,24 @@ func (s *sysUser) AddUserFromOauthUser(user *model.OauthUser) (err error) {
 	tx.Commit()
 
 	return
+}
+
+func roleToIntRole(roles []string) []int {
+	if len(roles) == 0 {
+		roles = append(roles, "user")
+	}
+
+	var intRole []int
+	for _, role := range roles {
+		switch role {
+		case "admin":
+			intRole = append(intRole, 1)
+		case "operation":
+			intRole = append(intRole, 2)
+		case "user":
+			intRole = append(intRole, 3)
+		}
+	}
+
+	return intRole
 }
