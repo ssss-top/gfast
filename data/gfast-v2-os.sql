@@ -34,23 +34,16 @@ CREATE TABLE `casbin_rule`  (
 -- ----------------------------
 -- Records of casbin_rule
 -- ----------------------------
-INSERT INTO `casbin_rule` VALUES ('g', '1', '1', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '1', '3', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '22', '2', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '22', '1', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '15', '2', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '78', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '83', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '84', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '89', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '103', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '104', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '106', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '90', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '112', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '8', '117', 'All', '', '', '');
+
 INSERT INTO `casbin_rule` VALUES ('p', '1', '1', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '2', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '3', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '5', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '6', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '8', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '16', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '17', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '18', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '19', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '20', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '21', 'All', '', '', '');
@@ -58,89 +51,73 @@ INSERT INTO `casbin_rule` VALUES ('p', '1', '22', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '23', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '24', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '25', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '6', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '41', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '42', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '43', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '86', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '2', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '8', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '16', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '17', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '18', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '26', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '27', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '28', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '29', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '30', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '31', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '28', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '33', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '34', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '36', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '37', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '38', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '39', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '40', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '41', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '42', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '43', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '44', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '45', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '46', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '33', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '47', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '48', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '49', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '40', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '50', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '51', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '52', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '53', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '54', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '3', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '34', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '55', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '36', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '56', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '57', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '58', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '59', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '60', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '37', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '38', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '61', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '62', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '39', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '63', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '1', '64', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '4', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '32', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '65', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '66', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '67', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '68', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '35', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '69', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '70', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '71', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '89', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '103', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '119', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '104', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '106', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '90', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '112', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '115', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '116', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '117', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '93', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '113', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '118', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '114', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '107', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '108', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '109', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '110', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', '1', '111', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '2', '2', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '3', '2', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '34', '1', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '35', '3', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '35', '2', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '5', '2', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '14', '3', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '36', '2', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '37', '2', '', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '75', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '76', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '86', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '185', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '186', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '226', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '227', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '228', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '229', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '230', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '231', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '232', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '233', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '234', 'All', '', '', '');
+
+INSERT INTO `casbin_rule` VALUES ('p', '1', '75', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '76', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '86', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '185', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '186', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '231', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '232', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '230', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '229', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '228', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '227', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '226', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '233', 'All', '', '', '');
+INSERT INTO `casbin_rule` VALUES ('p', '1', '234', 'All', '', '', '');
+
 INSERT INTO `casbin_rule` VALUES ('p', '2', '1', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '2', '5', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '2', '19', 'All', '', '', '');
@@ -184,16 +161,6 @@ INSERT INTO `casbin_rule` VALUES ('p', '2', '97', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '2', '98', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '2', '124', 'All', '', '', '');
 INSERT INTO `casbin_rule` VALUES ('p', '2', '126', 'All', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '38', '5', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '38', '8', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', 'alice', 'data1', 'read', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', 'bob', 'data2', 'write', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', 'data2_admin', 'data2', 'read', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('p', 'data2_admin', 'data2', 'write', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', 'alice', 'data2_admin', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '31', '1', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '31', '2', '', '', '', '');
-INSERT INTO `casbin_rule` VALUES ('g', '16', '3', '', '', '', '');
 
 -- ----------------------------
 -- Table structure for demo_data_auth
@@ -494,6 +461,7 @@ CREATE TABLE `sys_dept`  (
 -- ----------------------------
 -- Records of sys_dept
 -- ----------------------------
+INSERT INTO `sys_dept` VALUES (100, 0, '0', '神算云', 0, '若依', '15888888888', 'ry@qq.com', '1', 0, 31, '2021-07-13 15:56:52', '2021-07-13 15:57:05', NULL);
 INSERT INTO `sys_dept` VALUES (101, 100, '0,100', '深圳总公司', 1, '若依', '15888888888', 'ry@qq.com', '1', 0, NULL, '2021-07-13 15:56:52', '2021-07-13 15:56:52', NULL);
 INSERT INTO `sys_dept` VALUES (102, 100, '0,100', '长沙分公司', 2, '若依', '15888888888', 'ry@qq.com', '1', 0, NULL, '2021-07-13 15:56:52', '2021-07-13 15:56:52', NULL);
 INSERT INTO `sys_dept` VALUES (103, 101, '0,100,101', '研发部门', 1, '若依', '15888888888', 'ry@qq.com', '1', 0, NULL, '2021-07-13 15:56:52', '2021-07-13 15:56:52', NULL);
@@ -769,8 +737,8 @@ CREATE TABLE `sys_role`  (
 -- Records of sys_role
 -- ----------------------------
 INSERT INTO `sys_role` VALUES (1, 1, 0, '管理员', '超级管理员', 3);
-INSERT INTO `sys_role` VALUES (2, 1, 0, '运维', '运维用户', 4);
-INSERT INTO `sys_role` VALUES (3, 1, 0, '用户', '普通用户', 3);
+INSERT INTO `sys_role` VALUES (2, 1, 0, '运维', '运维用户', 3);
+INSERT INTO `sys_role` VALUES (3, 1, 0, '用户', '普通用户', 4);
 
 -- ----------------------------
 -- Table structure for sys_role_dept
