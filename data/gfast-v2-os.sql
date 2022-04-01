@@ -781,6 +781,7 @@ CREATE TABLE `sys_user`  (
   `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '联系地址',
   `describe` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT ' 描述信息',
   `phone_num` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '联系电话',
+  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT ' 全局 uuid',
   `last_login_ip` varchar(15) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT '' COMMENT '最后登录ip',
   `last_login_time` datetime(0) NULL COMMENT '最后登录时间',
   `created_at` datetime(0) NULL COMMENT '创建时间',
@@ -929,3 +930,4 @@ INSERT INTO `tools_gen_table_column` VALUES (718, 69, 'demo_status', '状态', '
 INSERT INTO `tools_gen_table_column` VALUES (719, 69, 'demo_cate', '分类', 'varchar(30)', 'string', 'DemoCate', 'demoCate', '0', '0', '1', '1', '1', '1', '1', 'EQ', 'checkbox', 'cms_news_type', 13, '', '', '', '', '');
 
 SET FOREIGN_KEY_CHECKS = 1;
+

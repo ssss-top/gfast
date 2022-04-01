@@ -898,6 +898,7 @@ func (s *sysUser) AddUserFromOauthUser(user *model.OauthUser) (err error) {
 	userData.UserEmail = user.Email
 	userData.Avatar = fmt.Sprintf("https://www.larvalabs.com/cryptopunks/cryptopunk%d.png", rand.Intn(2000))
 	userData.UserNickname = fmt.Sprintf("u_%d", time.Now().Unix())
+	userData.UUID = user.ID
 	// userData.UserSalt = req.UserSalt
 	// userData.UserPassword = req.Password
 	// userData.Remark = req.Remark

@@ -3,13 +3,11 @@ module gfast
 require (
 	github.com/StackExchange/wmi v1.2.0 // indirect
 	github.com/casbin/casbin/v2 v2.31.9
-	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/go-ole/go-ole v1.2.5 // indirect
 	github.com/goflyfox/gtoken v1.4.5
 	github.com/gogf/gcache-adapter v0.1.2
 	github.com/gogf/gf v1.16.6
 	github.com/gogf/swagger v1.3.0
-	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/google/uuid v1.3.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
@@ -22,12 +20,13 @@ require (
 	github.com/tencentyun/cos-go-sdk-v5 v0.7.27
 	github.com/tklauser/go-sysconf v0.3.7 // indirect
 	golang.org/x/image v0.0.0-20210220032944-ac19c3e999fb // indirect
-	golang.org/x/net v0.0.0-20210614182718-04defd469f4e // indirect
-	golang.org/x/text v0.3.7 // indirect
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
+	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1
 	gopkg.in/check.v1 v1.0.0-20200227125254-8fa46927fb4f // indirect
+	ss-quant-trade-common v0.0.0-00010101000000-000000000000
 )
 
 replace github.com/goflyfox/gtoken v1.4.5 => github.com/tiger1103/gtoken v1.4.8
+
+replace ss-quant-trade-common => ../ss-quant-trade-common
 
 go 1.16

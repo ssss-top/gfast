@@ -25,6 +25,7 @@ type SysUser struct {
 	Remark        string      `orm:"remark"           json:"remark"`        // 备注
 	IsAdmin       int         `orm:"is_admin"         json:"isAdmin"`       // 是否后台管理员 1 是  0   否
 	Address       string      `orm:"address"          json:"address"`       // 联系地址
+	UUID          string      `orm:"uuid"		 	  json:"uuid"`                 // 全局 uuid
 	Describe      string      `orm:"describe"         json:"describe"`      // 描述信息
 	PhoneNum      string      `orm:"phone_num"        json:"phoneNum"`      // 联系电话
 	LastLoginIp   string      `orm:"last_login_ip"    json:"lastLoginIp"`   // 最后登录ip
